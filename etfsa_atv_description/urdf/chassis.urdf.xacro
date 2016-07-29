@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<robot name="etfsa_atv_accessories" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="etfsa_atv_accessory">
+
+    <link name="chassis_link">
+      <visual>
+	 <origin xyz="-0.2 1.105 -0.07" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://etfsa_atv_description/meshes/chassis.dae" />
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="chassis_joint" type="fixed">
+      <parent link="base_link" />
+      <child link="chassis_link" />
+    </joint>
+
+<!--    
+<xacro:if value="$(optenv ETFSA_ATV_TOP_PLATE_ENABLED true)">
+      
+      <link name="plate_link">
+        <visual>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://etfsa_atv_description/meshes/plate.dae" />
+          </geometry>
+        </visual>
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <geometry>
+            <mesh filename="package://etfsa_atv_description/meshes/plate.dae" />
+          </geometry>
+        </collision>
+        <collision>
+-->
+  <!--
+          <geometry>
+            <box size="0.16 0.21 0.09" rpy="0 0 0"/>
+          </geometry>
+        </collision>
+      </link>
+-->
+  <!--
+      <joint name="top_plate_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="top_plate_link"/>
+        <origin xyz="0.0812 0 0.245" rpy="0 0 0"/>
+      </joint>
+
+    </xacro:if>
+-->
+  </xacro:macro>
+
+</robot>

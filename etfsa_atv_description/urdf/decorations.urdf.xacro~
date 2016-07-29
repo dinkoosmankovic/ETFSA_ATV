@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<robot name="etfsa_atv_chassis" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="etf_atv_chassis">
+    <link name="chassis_link">
+      <visual>
+        <origin xyz="0.05 0.51 -0.04" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://etfsa_atv_description/meshes/chassis.dae" />
+        </geometry>
+      </visual>
+    </link>
+    <joint name="chassis_joint" type="fixed">
+      <parent link="base" />
+      <child link="chassis_link" />
+    </joint>
+
+   
+  </xacro:macro>
+
+</robot>
