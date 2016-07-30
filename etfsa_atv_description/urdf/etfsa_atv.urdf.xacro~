@@ -77,16 +77,16 @@
     </gazebo>
 -->
     <xacro:etfsa_atv_wheel wheel_prefix="front_left">
-      <origin xyz="${wheelbase/2 + 0.02} ${track/2+0.52} ${wheel_vertical_offset}" rpy="0 0 0" />
+      <origin xyz="${wheelbase/2 + 0.02} ${track/2+0.50} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:etfsa_atv_wheel>
     <xacro:etfsa_atv_wheel wheel_prefix="front_right">
-      <origin xyz="${wheelbase/2 + 0.02} ${-track/2 - 0.035 +0.53} ${wheel_vertical_offset}" rpy="0 0 0" />
+      <origin xyz="${wheelbase/2 + 0.02} ${-track/2 - 0.035 +0.50} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:etfsa_atv_wheel>
     <xacro:etfsa_atv_wheel wheel_prefix="rear_left">
-      <origin xyz="${-wheelbase/2 +  0.09} ${track/2 +0.52} ${wheel_vertical_offset}" rpy="0 0 0" />
+      <origin xyz="${-wheelbase/2 +  0.09} ${track/2 +0.50} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:etfsa_atv_wheel>
     <xacro:etfsa_atv_wheel wheel_prefix="rear_right">
-      <origin xyz="${-wheelbase/2 + 0.09} ${-track/2 - 0.035 +0.53} ${wheel_vertical_offset}" rpy="0 0 0" />
+      <origin xyz="${-wheelbase/2 + 0.09} ${-track/2 - 0.035 +0.50} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:etfsa_atv_wheel>
  <xacro:etfsa_atv_accessory/>
 
@@ -110,7 +110,7 @@
       <sick_lms1xx_mount prefix="base" topic="scan"/>
 
       <joint name="laser_mount_joint" type="fixed">
-        <origin xyz="$(optenv ETFSA_ATV_LMS1XX_XYZ -0.075 0.6 0.1235)"
+        <origin xyz="$(optenv ETFSA_ATV_LMS1XX_XYZ 0.075 0.6 0.1235)"
                 rpy="$(optenv ETFSA_ATV_LMS1XX_RPY 0.0 0.0 0.0)" />
         <parent link="chassis_link" />
         <child link="base_laser_mount" />
