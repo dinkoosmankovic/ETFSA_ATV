@@ -77,16 +77,16 @@
     </gazebo>
 -->
     <xacro:etfsa_atv_wheel wheel_prefix="front_left">
-      <origin xyz="${wheelbase/2 + 0.02} ${track/2+0.52} ${wheel_vertical_offset}" rpy="0 0 0" />
+      <origin xyz="${wheelbase/2 + 0.02} ${track/2+0.50} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:etfsa_atv_wheel>
     <xacro:etfsa_atv_wheel wheel_prefix="front_right">
-      <origin xyz="${wheelbase/2 + 0.02} ${-track/2 - 0.035 +0.53} ${wheel_vertical_offset}" rpy="0 0 0" />
+      <origin xyz="${wheelbase/2 + 0.02} ${-track/2 - 0.035 +0.52} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:etfsa_atv_wheel>
     <xacro:etfsa_atv_wheel wheel_prefix="rear_left">
-      <origin xyz="${-wheelbase/2 +  0.09} ${track/2 +0.52} ${wheel_vertical_offset}" rpy="0 0 0" />
+      <origin xyz="${-wheelbase/2 +  0.09} ${track/2 +0.50} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:etfsa_atv_wheel>
     <xacro:etfsa_atv_wheel wheel_prefix="rear_right">
-      <origin xyz="${-wheelbase/2 + 0.09} ${-track/2 - 0.035 +0.53} ${wheel_vertical_offset}" rpy="0 0 0" />
+      <origin xyz="${-wheelbase/2 + 0.09} ${-track/2 - 0.035 +0.52} ${wheel_vertical_offset}" rpy="0 0 0" />
     </xacro:etfsa_atv_wheel>
  <xacro:etfsa_atv_accessory/>
 
